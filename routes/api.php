@@ -19,3 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/kong-service-test', [KongServiceController::class, 'index'])->name('kong.testing');
+Route::post('/kong-service-test', [KongServiceController::class, 'check_kong_connection'])->name('kong.testing');
